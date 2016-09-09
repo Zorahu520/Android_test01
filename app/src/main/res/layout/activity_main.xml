@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--LinearLayout  版面配置從上至下 從左至右。  orientation 選項:橫式/垂直 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="tw.org.iii.zoraone.MainActivity">
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Guess"/>
+        <EditText
+            android:id="@+id/textNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/guess"
+            android:layout_alignTop="@id/guess"
+            android:layout_alignBottom="@id/guess"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttonLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="b1"/>
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="b2"/>
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="b3"/>
+
+    </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</LinearLayout>
+        android:id="@+id/infoSom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonLine"
+        android:layout_below="@id/topLine"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"/>
+
+</RelativeLayout>
