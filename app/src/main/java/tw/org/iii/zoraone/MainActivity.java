@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 doRestart();
             }
         });
-
     }
+
     public void doRestart(){
         btnSmallLeft.setText("");
 
